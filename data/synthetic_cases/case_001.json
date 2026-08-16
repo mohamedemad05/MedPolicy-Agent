@@ -1,0 +1,30 @@
+{
+  "case_id": "CASE-001",
+  "patient_id": "PATIENT-001",
+  "requested_service_code": "SYN-IMG-MRI",
+
+  "coverage": {
+    "payer_id": "SYNTHETIC-PAYER",
+    "member_id": "MEMBER-001",
+    "active": true
+  },
+
+  "diagnoses": [
+    {
+      "code": "SYN-LBP-001",
+      "display": "Synthetic qualifying diagnosis"
+    }
+  ],
+
+  "treatments": [
+    {
+      "treatment_type": "physical_therapy",
+      "duration_weeks": 8,
+      "completed": true
+    }
+  ],
+
+  "symptoms_persist": true,
+
+  "prior_imaging": []
+}

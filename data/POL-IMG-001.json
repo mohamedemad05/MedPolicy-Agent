@@ -1,0 +1,10 @@
+{
+  "policy_id": "POL-IMG-001",
+  "version": "1.0",
+  "allowed_diagnosis_codes": [
+    "SYN-LBP-001",
+    "SYN-RAD-001"
+  ],
+  "minimum_conservative_treatment_weeks": 6,
+  "duplicate_imaging_window_days": 90
+}

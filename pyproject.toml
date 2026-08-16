@@ -1,0 +1,22 @@
+[project]
+name = "medpolicy-agent"
+version = "0.1.0"
+description = "Auditable prior authorization decision-support system"
+requires-python = ">=3.12"
+
+dependencies = [
+    "pydantic>=2.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0"
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["src/medpolicy"]

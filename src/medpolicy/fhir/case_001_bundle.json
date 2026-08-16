@@ -1,0 +1,81 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Patient/patient-001",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-001",
+        "identifier": [
+          {
+            "system": "https://example.org/fhir/sid/mrn",
+            "value": "MRN-001"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Coverage/coverage-001",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "coverage-001",
+        "status": "active",
+        "identifier": [
+          {
+            "system": "https://example.org/fhir/sid/member-id",
+            "value": "MEMBER-001"
+          }
+        ],
+        "beneficiary": {
+          "reference": "Patient/patient-001"
+        },
+        "payor": [
+          {
+            "reference": "Organization/payer-001"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Condition/condition-001",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "condition-001",
+        "subject": {
+          "reference": "Patient/patient-001"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/synthetic-diagnosis",
+              "code": "SYN-LBP-001",
+              "display": "Synthetic qualifying diagnosis"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/ServiceRequest/request-001",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "request-001",
+        "status": "active",
+        "intent": "order",
+        "subject": {
+          "reference": "Patient/patient-001"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "https://example.org/fhir/CodeSystem/synthetic-service",
+              "code": "SYN-IMG-MRI",
+              "display": "Synthetic MRI"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
